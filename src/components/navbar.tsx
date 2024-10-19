@@ -1,3 +1,5 @@
+import { Button } from "./ui/moving-border";
+
 export const NavBar = (): JSX.Element => {
   return (
     <div className="bg-gray-200 h-[10vh] top-0 sticky">
@@ -13,7 +15,12 @@ export const NavBar = (): JSX.Element => {
           <div>Expériences</div>
           <div>Compétences</div>
           <div>Formations</div>
-          <div className="bg-white px-5 py-3 rounded-lg">Me contacter</div>
+          <Button
+            borderRadius="1.75rem"
+            className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+          >
+            Me contacter
+          </Button>
         </div>
 
         {/* Mobile menu button (for very small screens) */}
