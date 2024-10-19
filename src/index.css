@@ -11,3 +11,19 @@
 }
 /* titles: Montserrat */
 /* Roboto */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  display: flex; /* Pour aligner le contenu si nécessaire */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  position: relative; /* Pour le positionnement absolu des éléments enfants si besoin */
+  overflow: hidden; /* Pour cacher tout débordement, si nécessaire */
+}

@@ -32,25 +32,32 @@ const CheckIcon = () => {
 
 export const PresentationCard = (): JSX.Element => {
   return (
-    <div className="relative">
-      <img
-        src={Me}
-        alt="Ma photo"
-        className="absolute top-[-30%] left-[-2%]  w-[30vh] h-[30vh] z-10"
-      />
-      <CardSpotlight className="w-[60vw] h-[40vh] rounded-3xl">
-        <div>
-          <div className="flex justify-end text-xl font-bold relative z-20 mt-2 text-white">
-            <div className="pr-5 underline">Nicolas MARQUETTE</div>
-            <div>Développeur Web Fullstack - Ingénieur en Informatique</div>
+    <div className="relative flex justify-center tracking-widest">
+      <CardSpotlight className="w-[90%] h-auto rounded-3xl relative overflow-visible">
+        <img
+          src={Me}
+          alt="Ma photo"
+          className="absolute  left-[6%]  w-[25vh] h-[25vh] sm:w-[30vh] sm:h-[30vh] z-10"
+          style={{ transform: "translate(-50%, -50%)" }} // Optionnel : pour centrer l'image par rapport à son point d'ancrage
+        />
+        <div className="p-5">
+          <div className="flex flex-col sm:flex-row justify-between text-xl font-bold relative z-20 mt-2 text-white">
+            <div className="underline mx-[20vh]">{`Nicolas MARQUETTE`}</div>
+            <div className="mt-2 sm:mt-0">
+              Développeur Web Fullstack - Ingénieur en Informatique
+            </div>
           </div>
-          <div className="flex justify text-neutral-200 mt-4 relative z-20">
-            <ul className="list-none  mt-2">
-              <Step title="Enter your email address" />
-              <Step title="Create a strong password" />
-              <Step title="Set up two-factor authentication" />
-              <Step title="Verify your identity" />
-            </ul>
+          <div className="flex justify-center text-neutral-200 mt-4 relative z-20">
+            <p className=" py-5">
+              <ul className="list-none  mt-2">
+                <Step title="Développeur Web Fullstack et Ingénieur en informatique." />
+                <Step title="Plus de 3 ans d'expérience dans le développement Web." />
+                <Step title="Capacité à concevoir des solutions innovantes et performantes" />
+                <Step title="Saisir rapidement les enjeux et les besoins des clients." />
+                <Step title="Proposer des solutions adaptées à chaque projet." />
+                <Step title="Dynamique, motivé et à l'écoute des nouvelles technologies, avec un effort constant d'amélioration des compétences." />
+              </ul>
+            </p>
           </div>
         </div>
       </CardSpotlight>

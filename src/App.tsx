@@ -4,9 +4,11 @@ import { Presentation } from "./components/presentation/presentation";
 
 function App() {
   return (
-    <div>
+    <div className="w-full h-full font-roboto">
       <NavBar />
-      <Presentation />
+      <div className="bg-[#2d2a40] h-full">
+        <Presentation />
+      </div>
     </div>
   );
 }

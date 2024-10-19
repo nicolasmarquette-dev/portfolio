@@ -2,7 +2,7 @@ import { Button } from "./ui/moving-border";
 
 export const NavBar = (): JSX.Element => {
   return (
-    <div className="bg-gray-200 h-[10vh] top-0 sticky">
+    <div className="bg-gray-200 h-[10vh] top-0 sticky z-0">
       <div className="mx-4 sm:mx-6 lg:mx-10 flex justify-between items-center h-full">
         {/* Logo */}
         <div className="text-lg sm:text-xl lg:text-2xl font-bold">
