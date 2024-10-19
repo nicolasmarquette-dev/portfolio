@@ -4,10 +4,43 @@ import { Presentation } from "./components/presentation/presentation";
 
 function App() {
   return (
-    <div className="w-full h-full font-roboto">
+    <div className="w-full min-h-screen bg-[#0b0918] font-roboto">
       <NavBar />
-      <div className="bg-[#2d2a40] h-full">
+      <div className="flex-grow overflow-y-auto">
         <Presentation />
+        {/* Ajoute ton contenu ici */}
+        <div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
       </div>
     </div>
   );

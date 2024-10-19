@@ -5,7 +5,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div className="full-screen">
+    <div className="w-full">
       <App />
     </div>
   </StrictMode>

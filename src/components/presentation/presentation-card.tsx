@@ -37,17 +37,17 @@ export const PresentationCard = (): JSX.Element => {
         <img
           src={Me}
           alt="Ma photo"
-          className="absolute  left-[6%]  w-[25vh] h-[25vh] sm:w-[30vh] sm:h-[30vh] z-10"
+          className="absolute  left-[6%]  w-[25vh] h-[25vh] sm:w-[30vh] sm:h-[30vh] z-1"
           style={{ transform: "translate(-50%, -50%)" }} // Optionnel : pour centrer l'image par rapport à son point d'ancrage
         />
         <div className="p-5">
-          <div className="flex flex-col sm:flex-row justify-between text-xl font-bold relative z-20 mt-2 text-white">
+          <div className="flex flex-col sm:flex-row justify-between text-xl font-bold relative z-1 mt-2 text-white">
             <div className="underline mx-[20vh]">{`Nicolas MARQUETTE`}</div>
             <div className="mt-2 sm:mt-0">
               Développeur Web Fullstack - Ingénieur en Informatique
             </div>
           </div>
-          <div className="flex justify-center text-neutral-200 mt-4 relative z-20">
+          <div className="flex justify-center text-neutral-200 mt-4 relative z-1">
             <p className=" py-5">
               <ul className="list-none  mt-2">
                 <Step title="Développeur Web Fullstack et Ingénieur en informatique." />
