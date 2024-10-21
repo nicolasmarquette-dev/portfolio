@@ -1,4 +1,5 @@
 import "./App.css";
+import { Experiences } from "./components/experiences";
 import { NavBar } from "./components/navbar";
 import { Presentation } from "./components/presentation/presentation";
 
@@ -8,7 +9,7 @@ function App() {
       <NavBar />
       <div className="flex-grow overflow-hidden">
         <Presentation />
-        {/* Ajoute ton contenu ici */}
+        <Experiences />
         <div>
           <br />
           <br />
