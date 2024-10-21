@@ -32,7 +32,7 @@ export const NavBar = (): JSX.Element => {
           MARQUETTEplace
         </div>
 
-        <div className="flex items-center space-x-[4vw]">
+        <div className=" hidden items-center space-x-[4vw] md:flex">
           <div>Qui suis-je ?</div>
           <div>Expériences</div>
           <div>Compétences</div>
@@ -44,7 +44,7 @@ export const NavBar = (): JSX.Element => {
             Me contacter
           </Button>
         </div>
-        <div className="sm:hidden text-base font-medium">Menu</div>
+        <div className="md:hidden text-base font-medium">Menu</div>
       </div>
     </div>
   );

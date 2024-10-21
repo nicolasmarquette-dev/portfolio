@@ -42,7 +42,7 @@ export const PresentationCard = (): JSX.Element => {
         />
         <div className="p-5">
           <div className="flex flex-col sm:flex-row justify-between text-xl font-bold relative z-1 mt-2 text-white">
-            <div className="underline mx-[20vh]">{`Nicolas MARQUETTE`}</div>
+            <div className="underline mx-[10vw]">{`Nicolas MARQUETTE`}</div>
             <div className="mt-2 sm:mt-0">
               Développeur Web Fullstack - Ingénieur en Informatique
             </div>
