@@ -1,6 +1,4 @@
-import { CardSpotlight } from "./ui/card-spotlight";
-
-export const Experiencess = () => {
+export const Experiences = () => {
   return (
     <div className="text-white">
       <h1 className="underline text-3xl sm:text-4xl lg:text-6xl text-center py-10 sm:py-16 tracking-widest">
