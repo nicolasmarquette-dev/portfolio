@@ -31,10 +31,10 @@ export const NavBar = (): JSX.Element => {
 
   return (
     <>
-      {isVisible && (
+      {isVisible ? (
         <div
           className={`sticky top-0 z-10 transition-colors duration-500 ${
-            isScrolled ? "bg-pink-100 text-purple-900" : " text-white"
+            isScrolled ? "bg-gray-200 text-purple-900 " : " text-white"
           }`}
         >
           <div className="container mx-auto px-4 py-2 flex justify-between items-center">
@@ -44,7 +44,7 @@ export const NavBar = (): JSX.Element => {
                 href="#"
                 className={`transition-colors ${
                   isScrolled ? "hover:text-purple-600" : "hover:text-purple-300"
-                }`}
+                } transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
               >
                 Qui suis-je ?
               </a>
@@ -52,7 +52,7 @@ export const NavBar = (): JSX.Element => {
                 href="#"
                 className={`transition-colors ${
                   isScrolled ? "hover:text-purple-600" : "hover:text-purple-300"
-                }`}
+                } transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
               >
                 Expériences
               </a>
@@ -60,7 +60,7 @@ export const NavBar = (): JSX.Element => {
                 href="#"
                 className={`transition-colors ${
                   isScrolled ? "hover:text-purple-600" : "hover:text-purple-300"
-                }`}
+                } transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
               >
                 Compétences
               </a>
@@ -68,7 +68,7 @@ export const NavBar = (): JSX.Element => {
                 href="#"
                 className={`transition-colors ${
                   isScrolled ? "hover:text-purple-600" : "hover:text-purple-300"
-                }`}
+                } transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
               >
                 Formations
               </a>
@@ -85,6 +85,8 @@ export const NavBar = (): JSX.Element => {
             </Button>
           </div>
         </div>
+      ) : (
+        <div className="h-[10vh]"></div>
       )}
     </>
   );

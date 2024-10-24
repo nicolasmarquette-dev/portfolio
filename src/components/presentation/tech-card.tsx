@@ -34,7 +34,7 @@ export const TechCard = (): JSX.Element => {
   }, [isReactInView, isJavaInView, isMysqlInView]);
 
   return (
-    <div className="bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
+    <div className="bg-gradient-to-br from-red-900 to-indigo-900 text-white">
       <h1 className="text-3xl sm:text-4xl lg:text-6xl text-center py-10 sm:py-16 tracking-widest font-bold">
         Mon expertise
         <span className="block w-24 h-1 bg-purple-400 mx-auto mt-4"></span>
@@ -45,9 +45,9 @@ export const TechCard = (): JSX.Element => {
         animate={hasReactViewed ? { x: 10 } : { x: "-90vw" }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
-        <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">
-          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden">
-            <div className="p-6">
+        <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20 ">
+          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <div className="p-6 ">
               <h2 className="text-lg lg:text-xl font-semibold mb-4 underline">
                 ReactJs
               </h2>
@@ -61,7 +61,7 @@ export const TechCard = (): JSX.Element => {
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img
               src={ReactLogo}
-              className="w-full h-auto animate-spin-slow"
+              className="w-full h-auto animate-spin-slow App-logo"
               alt="React logo"
             />
           </div>
@@ -78,7 +78,7 @@ export const TechCard = (): JSX.Element => {
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img src={JavaLogo} className="w-full h-auto" alt="Java logo" />
           </div>
-          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden">
+          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="p-6">
               <h2 className="text-lg lg:text-xl font-semibold mb-4 underline">
                 Java Spring
@@ -106,7 +106,7 @@ export const TechCard = (): JSX.Element => {
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img src={MysqlLogo} className="w-full h-auto" alt="MySQL logo" />
           </div>
-          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden">
+          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="p-6">
               <h2 className="text-lg lg:text-xl font-semibold mb-4 underline">
                 MySQL
