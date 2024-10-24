@@ -5,9 +5,9 @@ import { Presentation } from "./components/presentation/presentation";
 
 function App() {
   return (
-    <div className=" min-h-screen bg-[#1d1025] font-roboto">
+    <div className=" min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 font-roboto">
       <NavBar />
-      <div className="flex-grow overflow-hidden">
+      <div className="flex-grow overflow-hidden ">
         <Presentation />
         <Experiences />
         <div>

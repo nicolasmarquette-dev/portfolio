@@ -1,16 +1,17 @@
 import "./tech-card.css";
-import { motion, useInView } from "framer-motion";
-import { CardSpotlight } from "../ui/card-spotlight";
+
 import ReactLogo from "../../assets/react.svg";
 import JavaLogo from "../../assets/java-logo.png";
 import SpringLogo from "../../assets/spring-logo.png";
 import MysqlLogo from "../../assets/mysql-logo.png";
+
 import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 const Divider = (): JSX.Element => {
   return (
     <div className="w-full my-12 flex justify-center">
-      <div className="h-0.5 bg-[#c785f2] w-[80%] sm:w-[60%] lg:w-[40%]" />
+      <div className="h-0.5 bg-purple-400 w-[80%] sm:w-[60%] lg:w-[40%]" />
     </div>
   );
 };
@@ -27,42 +28,40 @@ export const TechCard = (): JSX.Element => {
   const [hasMysqlViewed, setHasMysqlViewed] = useState(false);
 
   useEffect(() => {
-    if (isReactInView && !hasReactViewed) {
-      setHasReactViewed(true);
-    }
-    if (isJavaInView && !hasJavaViewed) {
-      setHasJavaViewed(true);
-    }
-    if (isMysqlInView && !hasMysqlViewed) {
-      setHasMysqlViewed(true);
-    }
+    if (isReactInView && !hasReactViewed) setHasReactViewed(true);
+    if (isJavaInView && !hasJavaViewed) setHasJavaViewed(true);
+    if (isMysqlInView && !hasMysqlViewed) setHasMysqlViewed(true);
   }, [isReactInView, isJavaInView, isMysqlInView]);
 
   return (
-    <div className="text-white">
-      <h1 className="underline text-3xl sm:text-4xl lg:text-6xl text-center py-10 sm:py-16 tracking-widest">
+    <div className="bg-gradient-to-br from-purple-900 to-indigo-900 text-white">
+      <h1 className="text-3xl sm:text-4xl lg:text-6xl text-center py-10 sm:py-16 tracking-widest font-bold">
         Mon expertise
+        <span className="block w-24 h-1 bg-purple-400 mx-auto mt-4"></span>
       </h1>
       <motion.div
         ref={reactRef}
-        initial={{ x: "0vw" }} // Départ hors de l'écran à gauche
-        animate={hasReactViewed ? { x: 10 } : { x: "-90vw" }} // Animation basée sur la visibilité
+        initial={{ x: "-90vw" }}
+        animate={hasReactViewed ? { x: 10 } : { x: "-90vw" }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">
-          <CardSpotlight className="w-[80vw] sm:w-[60vw] lg:w-[30vw] rounded-3xl text-center">
-            <h2 className="underline text-lg lg:text-xl">ReactJs</h2>
-            <br />
-            <div className="text-sm lg:text-base tracking-widest">
-              Je maîtrise parfaitement ReactJs avec TypeScript, ce qui me permet
-              de développer des interfaces utilisateur robustes et typées pour
-              des applications web modernes.
+          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden">
+            <div className="p-6">
+              <h2 className="text-lg lg:text-xl font-semibold mb-4 underline">
+                ReactJs
+              </h2>
+              <p className="text-sm lg:text-base tracking-widest">
+                Je maîtrise parfaitement ReactJs avec TypeScript, ce qui me
+                permet de développer des interfaces utilisateur robustes et
+                typées pour des applications web modernes.
+              </p>
             </div>
-          </CardSpotlight>
+          </div>
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img
               src={ReactLogo}
-              className="w-full h-auto App-logo"
+              className="w-full h-auto animate-spin-slow"
               alt="React logo"
             />
           </div>
@@ -71,23 +70,26 @@ export const TechCard = (): JSX.Element => {
       <Divider />
       <motion.div
         ref={javaRef}
-        initial={{ x: "0vw" }} // Départ hors de l'écran à gauche
-        animate={hasJavaViewed ? { x: 0 } : { x: "90vw" }} // Animation basée sur la visibilité
+        initial={{ x: "90vw" }}
+        animate={hasJavaViewed ? { x: 0 } : { x: "90vw" }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img src={JavaLogo} className="w-full h-auto" alt="Java logo" />
           </div>
-          <CardSpotlight className="w-[80vw] h-[50vw] sm:w-[60vw] sm:h-auto lg:w-[30vw] rounded-3xl text-center h-auto">
-            <h2 className="underline text-lg lg:text-xl">Java Spring</h2>
-            <br />
-            <div className="text-sm lg:text-base tracking-widest">
-              Je maîtrise le langage Java ainsi que le framework Spring, ce qui
-              me permet de concevoir et développer des applications backend
-              robustes, évolutives et performantes
+          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden">
+            <div className="p-6">
+              <h2 className="text-lg lg:text-xl font-semibold mb-4 underline">
+                Java Spring
+              </h2>
+              <p className="text-sm lg:text-base tracking-widest">
+                Je maîtrise le langage Java ainsi que le framework Spring, ce
+                qui me permet de concevoir et développer des applications
+                backend robustes, évolutives et performantes.
+              </p>
             </div>
-          </CardSpotlight>
+          </div>
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img src={SpringLogo} className="w-full h-auto" alt="Spring logo" />
           </div>
@@ -96,23 +98,26 @@ export const TechCard = (): JSX.Element => {
       <Divider />
       <motion.div
         ref={mysqlRef}
-        initial={{ x: "0vw" }} // Départ hors de l'écran à gauche
-        animate={hasMysqlViewed ? { x: 10 } : { x: "-90vw" }} // Animation basée sur la visibilité
+        initial={{ x: "-90vw" }}
+        animate={hasMysqlViewed ? { x: 10 } : { x: "-90vw" }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img src={MysqlLogo} className="w-full h-auto" alt="MySQL logo" />
           </div>
-          <CardSpotlight className="w-[80vw] sm:w-[60vw] lg:w-[30vw] rounded-3xl text-center">
-            <h2 className="underline text-lg lg:text-xl">MySQL</h2>
-            <br />
-            <div className="text-sm lg:text-base tracking-widest">
-              Je possède une expertise solide en bases de données MySQL, me
-              permettant de concevoir et d’optimiser efficacement des systèmes
-              de gestion de données fiables et performants.
+          <div className="w-[80vw] sm:w-[60vw] lg:w-[30vw] bg-black/30 rounded-xl shadow-md overflow-hidden">
+            <div className="p-6">
+              <h2 className="text-lg lg:text-xl font-semibold mb-4 underline">
+                MySQL
+              </h2>
+              <p className="text-sm lg:text-base tracking-widest">
+                Je possède une expertise solide en bases de données MySQL, me
+                permettant de concevoir et d'optimiser efficacement des systèmes
+                de gestion de données fiables et performants.
+              </p>
             </div>
-          </CardSpotlight>
+          </div>
         </div>
       </motion.div>
     </div>

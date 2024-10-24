@@ -1,64 +1,52 @@
 import Me from "../../assets/me_marquette_2.png";
-import { CardSpotlight } from "../ui/card-spotlight";
-
-const Step = ({ title }: { title: string }) => {
-  return (
-    <li className="flex gap-2 items-start py-1">
-      <CheckIcon />
-      <p className="text-white">{title ?? ""}</p>
-    </li>
-  );
-};
-
-const CheckIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="h-4 w-4 text-blue-500 mt-1 flex-shrink-0"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path
-        d="M12 2c-.218 0 -.432 .002 -.642 .005l-.616 .017l-.299 .013l-.579 .034l-.553 .046c-4.785 .464 -6.732 2.411 -7.196 7.196l-.046 .553l-.034 .579c-.005 .098 -.01 .198 -.013 .299l-.017 .616l-.004 .318l-.001 .324c0 .218 .002 .432 .005 .642l.017 .616l.013 .299l.034 .579l.046 .553c.464 4.785 2.411 6.732 7.196 7.196l.553 .046l.579 .034c.098 .005 .198 .01 .299 .013l.616 .017l.642 .005l.642 -.005l.616 -.017l.299 -.013l.579 -.034l.553 -.046c4.785 -.464 6.732 -2.411 7.196 -7.196l.046 -.553l.034 -.579c.005 -.098 .01 -.198 .013 -.299l.017 -.616l.005 -.642l-.005 -.642l-.017 -.616l-.013 -.299l-.034 -.579l-.046 -.553c-.464 -4.785 -2.411 -6.732 -7.196 -7.196l-.553 -.046l-.579 -.034a28.058 28.058 0 0 0 -.299 -.013l-.616 -.017l-.318 -.004l-.324 -.001zm2.293 7.293a1 1 0 0 1 1.497 1.32l-.083 .094l-4 4a1 1 0 0 1 -1.32 .083l-.094 -.083l-2 -2a1 1 0 0 1 1.32 -1.497l.094 .083l1.293 1.292l3.293 -3.292z"
-        fill="currentColor"
-        strokeWidth="0"
-      />
-    </svg>
-  );
-};
-
 export const PresentationCard = (): JSX.Element => {
   return (
-    <div className="relative flex justify-center tracking-widest">
-      <CardSpotlight className="w-[90%] h-auto rounded-3xl relative overflow-visible">
-        <img
-          src={Me}
-          alt="Ma photo"
-          className="absolute  left-[6%]  w-[25vh] h-[25vh] sm:w-[30vh] sm:h-[30vh] z-1"
-          style={{ transform: "translate(-50%, -50%)" }} // Optionnel : pour centrer l'image par rapport à son point d'ancrage
-        />
-        <div className="p-5">
-          <div className="flex flex-col sm:flex-row justify-between text-xl font-bold relative z-1 mt-2 text-white">
-            <div className="underline mx-[10vw]">{`Nicolas MARQUETTE`}</div>
-            <div className="mt-2 sm:mt-0">
-              Développeur Web Fullstack - Ingénieur en Informatique
+    <div className="grid place-items-center h-[90vh] text-white">
+      <main className="container mx-auto px-4">
+        <div className="bg-black bg-opacity-30 rounded-3xl p-8 backdrop-blur-sm">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <img
+              src={Me}
+              alt="Nicolas MARQUETTE"
+              className="w-48 h-48 rounded-full border-4 border-purple-400 shadow-lg"
+            />
+            <div className="flex-1">
+              <h2 className="text-4xl font-bold mb-2">Nicolas MARQUETTE</h2>
+              <h3 className="text-2xl text-purple-300 mb-6">
+                Développeur Web Fullstack - Ingénieur en Informatique
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Développeur Web Fullstack et Ingénieur en informatique.",
+                  "Plus de 3 ans d'expérience dans le développement Web.",
+                  "Capacité à concevoir des solutions innovantes et performantes",
+                  "Saisir rapidement les enjeux et les besoins des clients.",
+                  "Proposer des solutions adaptées à chaque projet.",
+                  "Dynamique, motivé et à l'écoute des nouvelles technologies, avec un effort constant d'amélioration des compétences.",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg
+                      className="w-5 h-5 text-purple-400 mr-2 mt-1 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <div className="flex justify-center text-neutral-200 mt-4 relative z-1 text-xs sm:text-sm md:text-base">
-            <span className=" py-5">
-              <Step title="Développeur Web Fullstack et Ingénieur en informatique." />
-              <Step title="Plus de 3 ans d'expérience dans le développement Web." />
-              <Step title="Capacité à concevoir des solutions innovantes et performantes" />
-              <Step title="Saisir rapidement les enjeux et les besoins des clients." />
-              <Step title="Proposer des solutions adaptées à chaque projet." />
-              <Step title="Dynamique, motivé et à l'écoute des nouvelles technologies, avec un effort constant d'amélioration des compétences." />
-            </span>
-          </div>
         </div>
-      </CardSpotlight>
+      </main>
     </div>
   );
 };
