@@ -35,7 +35,7 @@ export const TechCard = (): JSX.Element => {
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">
-          <CardSpotlight className="w-[80vw] h-[50vw] sm:w-[60vw] sm:h-[40vw] lg:w-[20vw] lg:h-[20vw] rounded-3xl text-center">
+          <CardSpotlight className="w-[80vw] sm:w-[60vw] lg:w-[30vw] rounded-3xl text-center">
             <h2 className="underline text-lg lg:text-xl">ReactJs</h2>
             <br />
             <div className="text-sm lg:text-base tracking-widest">
@@ -64,7 +64,7 @@ export const TechCard = (): JSX.Element => {
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img src={JavaLogo} className="w-full h-auto" alt="Java logo" />
           </div>
-          <CardSpotlight className="w-[80vw] h-[50vw] sm:w-[60vw] sm:h-[40vw] lg:w-[20vw] lg:h-[20vw] rounded-3xl text-center">
+          <CardSpotlight className="w-[80vw] h-[50vw] sm:w-[60vw] sm:h-auto lg:w-[30vw] rounded-3xl text-center h-auto">
             <h2 className="underline text-lg lg:text-xl">Java Spring</h2>
             <br />
             <div className="text-sm lg:text-base tracking-widest">
@@ -89,7 +89,7 @@ export const TechCard = (): JSX.Element => {
           <div className="w-[30vw] sm:w-[20vw] lg:w-[20vw]">
             <img src={MysqlLogo} className="w-full h-auto" alt="MySQL logo" />
           </div>
-          <CardSpotlight className="w-[80vw] h-[50vw] sm:w-[60vw] sm:h-[40vw] lg:w-[20vw] lg:h-[20vw] rounded-3xl text-center">
+          <CardSpotlight className="w-[80vw] sm:w-[60vw] lg:w-[30vw] rounded-3xl text-center">
             <h2 className="underline text-lg lg:text-xl">MySQL</h2>
             <br />
             <div className="text-sm lg:text-base tracking-widest">
