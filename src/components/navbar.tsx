@@ -52,7 +52,7 @@ export const NavBar = (): JSX.Element => {
           }`}
         >
           <div className="mx-4 sm:mx-6 lg:mx-10 flex justify-between items-center h-full">
-            <div className="text-lg sm:text-xl lg:text-2xl font-bold">
+            <div className="text-lg sm:text-xl lg:text-2xl font-bold overflow-hidden transform transition-transform duration-300 hover:scale-105">
               MARQUETTEplace
             </div>
 
