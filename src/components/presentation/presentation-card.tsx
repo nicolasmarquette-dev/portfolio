@@ -5,7 +5,7 @@ const Step = ({ title }: { title: string }) => {
   return (
     <li className="flex gap-2 items-start">
       <CheckIcon />
-      <p className="text-white">{title}</p>
+      <p className="text-white">{title ?? ""}</p>
     </li>
   );
 };
@@ -48,16 +48,14 @@ export const PresentationCard = (): JSX.Element => {
             </div>
           </div>
           <div className="flex justify-center text-neutral-200 mt-4 relative z-1">
-            <p className=" py-5">
-              <ul className="list-none  mt-2">
-                <Step title="Développeur Web Fullstack et Ingénieur en informatique." />
-                <Step title="Plus de 3 ans d'expérience dans le développement Web." />
-                <Step title="Capacité à concevoir des solutions innovantes et performantes" />
-                <Step title="Saisir rapidement les enjeux et les besoins des clients." />
-                <Step title="Proposer des solutions adaptées à chaque projet." />
-                <Step title="Dynamique, motivé et à l'écoute des nouvelles technologies, avec un effort constant d'amélioration des compétences." />
-              </ul>
-            </p>
+            <span className=" py-5">
+              <Step title="Développeur Web Fullstack et Ingénieur en informatique." />
+              <Step title="Plus de 3 ans d'expérience dans le développement Web." />
+              <Step title="Capacité à concevoir des solutions innovantes et performantes" />
+              <Step title="Saisir rapidement les enjeux et les besoins des clients." />
+              <Step title="Proposer des solutions adaptées à chaque projet." />
+              <Step title="Dynamique, motivé et à l'écoute des nouvelles technologies, avec un effort constant d'amélioration des compétences." />
+            </span>
           </div>
         </div>
       </CardSpotlight>
