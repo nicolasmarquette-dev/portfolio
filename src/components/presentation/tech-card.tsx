@@ -5,7 +5,7 @@ import ReactLogo from "../../assets/react.svg";
 import JavaLogo from "../../assets/java-logo.png";
 import SpringLogo from "../../assets/spring-logo.png";
 import MysqlLogo from "../../assets/mysql-logo.png";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Divider = (): JSX.Element => {
   return (
@@ -18,10 +18,25 @@ const Divider = (): JSX.Element => {
 export const TechCard = (): JSX.Element => {
   const reactRef = useRef(null);
   const isReactInView = useInView(reactRef);
+  const [hasReactViewed, setHasReactViewed] = useState(false);
   const javaRef = useRef(null);
   const isJavaInView = useInView(javaRef);
+  const [hasJavaViewed, setHasJavaViewed] = useState(false);
   const mysqlRef = useRef(null);
   const isMysqlInView = useInView(mysqlRef);
+  const [hasMysqlViewed, setHasMysqlViewed] = useState(false);
+
+  useEffect(() => {
+    if (isReactInView && !hasReactViewed) {
+      setHasReactViewed(true);
+    }
+    if (isJavaInView && !hasJavaViewed) {
+      setHasJavaViewed(true);
+    }
+    if (isMysqlInView && !hasMysqlViewed) {
+      setHasMysqlViewed(true);
+    }
+  }, [isReactInView, isJavaInView, isMysqlInView]);
 
   return (
     <div className="text-white">
@@ -31,7 +46,7 @@ export const TechCard = (): JSX.Element => {
       <motion.div
         ref={reactRef}
         initial={{ x: "0vw" }} // Départ hors de l'écran à gauche
-        animate={isReactInView ? { x: 10 } : { x: "-90vw" }} // Animation basée sur la visibilité
+        animate={hasReactViewed ? { x: 10 } : { x: "-90vw" }} // Animation basée sur la visibilité
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">
@@ -57,7 +72,7 @@ export const TechCard = (): JSX.Element => {
       <motion.div
         ref={javaRef}
         initial={{ x: "0vw" }} // Départ hors de l'écran à gauche
-        animate={isJavaInView ? { x: 0 } : { x: "90vw" }} // Animation basée sur la visibilité
+        animate={hasJavaViewed ? { x: 0 } : { x: "90vw" }} // Animation basée sur la visibilité
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">
@@ -82,7 +97,7 @@ export const TechCard = (): JSX.Element => {
       <motion.div
         ref={mysqlRef}
         initial={{ x: "0vw" }} // Départ hors de l'écran à gauche
-        animate={isMysqlInView ? { x: 10 } : { x: "-90vw" }} // Animation basée sur la visibilité
+        animate={hasMysqlViewed ? { x: 10 } : { x: "-90vw" }} // Animation basée sur la visibilité
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="flex flex-col items-center lg:flex-row justify-around flex-wrap space-y-8 lg:space-y-0 lg:space-x-10 px-4 lg:px-20">

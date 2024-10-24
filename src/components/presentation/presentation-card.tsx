@@ -3,7 +3,7 @@ import { CardSpotlight } from "../ui/card-spotlight";
 
 const Step = ({ title }: { title: string }) => {
   return (
-    <li className="flex gap-2 items-start">
+    <li className="flex gap-2 items-start py-1">
       <CheckIcon />
       <p className="text-white">{title ?? ""}</p>
     </li>
@@ -47,7 +47,7 @@ export const PresentationCard = (): JSX.Element => {
               Développeur Web Fullstack - Ingénieur en Informatique
             </div>
           </div>
-          <div className="flex justify-center text-neutral-200 mt-4 relative z-1">
+          <div className="flex justify-center text-neutral-200 mt-4 relative z-1 text-xs sm:text-sm md:text-base">
             <span className=" py-5">
               <Step title="Développeur Web Fullstack et Ingénieur en informatique." />
               <Step title="Plus de 3 ans d'expérience dans le développement Web." />
