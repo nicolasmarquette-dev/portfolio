@@ -34,7 +34,7 @@ export const NavBar = (): JSX.Element => {
       {isVisible && (
         <div
           className={`sticky top-0 z-10 transition-colors duration-500 ${
-            isScrolled ? "bg-purple-200 text-purple-900" : " text-white"
+            isScrolled ? "bg-pink-100 text-purple-900" : " text-white"
           }`}
         >
           <div className="container mx-auto px-4 py-2 flex justify-between items-center">
