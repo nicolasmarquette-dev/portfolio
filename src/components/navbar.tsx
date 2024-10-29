@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react";
 import { Button } from "../components/ui/moving-border";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 export const NavBar = (): JSX.Element => {
+  const { scrollYProgress } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 0);
   };
+
+  const background = useTransform(
+    scrollYProgress,
+    [0,1],
+    ["#FFFFFF","#6366F1"]
+  )
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -37,6 +45,15 @@ export const NavBar = (): JSX.Element => {
             isScrolled ? "bg-gray-200 text-purple-900 " : " text-white"
           }`}
         >
+          <motion.div
+    style={{
+      scaleX: scrollYProgress,
+      background,
+      x:"-50%",
+      y:"-50%",
+    }}
+    className="fixed left-1/2 top-0 h-4 w-screen bg-indigo-500"
+    ></motion.div>
           <div className="container mx-auto px-4 py-2 flex justify-between items-center">
             <h1 className="text-2xl font-bold">MARQUETTEplace</h1>
             <nav className="hidden md:flex space-x-6">
