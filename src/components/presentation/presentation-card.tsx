@@ -3,7 +3,7 @@ export const PresentationCard = (): JSX.Element => {
   return (
     <div className="grid place-items-center h-[90vh] text-white">
       <main className="container mx-auto px-4">
-        <div className="bg-black bg-opacity-30 rounded-3xl p-8 backdrop-blur-sm">
+        <div className="bg-black bg-opacity-30 rounded-3xl p-8 backdrop-blur-sm hover:shadow-purple-500 hover:shadow-2xl hover:duration-1000">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             <img
               src={Me}

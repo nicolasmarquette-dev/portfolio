@@ -7,7 +7,6 @@ export const Presentation = (): JSX.Element => {
       <div className="z-0">
         <PresentationCard />
       </div>
-      <div className="h-screen bg-white"></div>
       <TechCard />
     </>
   );
