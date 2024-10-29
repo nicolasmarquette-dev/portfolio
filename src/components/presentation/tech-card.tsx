@@ -34,10 +34,9 @@ export const TechCard = (): JSX.Element => {
   }, [isReactInView, isJavaInView, isMysqlInView]);
 
   return (
-    <div className="bg-gradient-to-br from-red-900 to-indigo-900 text-white">
+    <div className="bg-gradient-to-br from-red-900 to-indigo-900 text-white pb-6">
       <h1 className="text-3xl sm:text-4xl lg:text-6xl text-center py-10 sm:py-16 tracking-widest font-bold">
         Mon expertise
-        <span className="block w-24 h-1 bg-purple-400 mx-auto mt-4"></span>
       </h1>
       <motion.div
         ref={reactRef}

@@ -1,7 +1,7 @@
 export const Experiences = () => {
   return (
-    <div className="text-white bg-gradient-to-br from-yellow-900 to-indigo-900">
-      <h1 className="underline text-3xl sm:text-4xl lg:text-6xl text-center sm:py-16 tracking-widest">
+    <div className="">
+      <h1 className="text-3xl sm:text-4xl lg:text-6xl text-center py-10 sm:py-16 tracking-widest font-bold text-white">
         Mes expériences
       </h1>
 
